@@ -1,0 +1,14 @@
+C:\Users\joano\source\repos\ConsoleInvaders\bin\Debug\net8.0\ConsoleInvaders.exe
+C:\Users\joano\source\repos\ConsoleInvaders\bin\Debug\net8.0\ConsoleInvaders.deps.json
+C:\Users\joano\source\repos\ConsoleInvaders\bin\Debug\net8.0\ConsoleInvaders.runtimeconfig.json
+C:\Users\joano\source\repos\ConsoleInvaders\bin\Debug\net8.0\ConsoleInvaders.dll
+C:\Users\joano\source\repos\ConsoleInvaders\bin\Debug\net8.0\ConsoleInvaders.pdb
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.AssemblyInfoInputs.cache
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.AssemblyInfo.cs
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.csproj.CoreCompileInputs.cache
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.dll
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\refint\ConsoleInvaders.dll
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.pdb
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.genruntimeconfig.cache
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ref\ConsoleInvaders.dll
