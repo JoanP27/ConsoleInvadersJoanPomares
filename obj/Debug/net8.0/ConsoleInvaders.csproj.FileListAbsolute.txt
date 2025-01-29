@@ -12,3 +12,4 @@ C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\refint\ConsoleInvad
 C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.pdb
 C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.genruntimeconfig.cache
 C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ref\ConsoleInvaders.dll
+C:\Users\joano\source\repos\ConsoleInvaders\obj\Debug\net8.0\ConsoleInvaders.sourcelink.json

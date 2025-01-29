@@ -45,7 +45,7 @@ class Enemigo : Sprite
     public override void Desaparecer()
     {
         base.Desaparecer();
-        MoverA(20, 20);
+        MoverA(1, 1);
     }
 
 

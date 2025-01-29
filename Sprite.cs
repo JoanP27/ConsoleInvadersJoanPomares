@@ -34,6 +34,11 @@ class Sprite
     {
         return y;
     }
+
+    public string GetImg()
+    {
+        return img;
+    }
     public virtual void Desaparecer()
     {
         Console.SetCursorPosition(this.x, this.y);
@@ -53,8 +58,7 @@ class Sprite
     }
     public bool CollisionaCon(Sprite sprite)
     {
-
-        if (this.x >= sprite.GetX() && this.x <= sprite.GetX() + 2 && this.y == sprite.GetY()) { return true; }
+        if (this.x >= sprite.GetX() && this.x <= sprite.GetX() + sprite.GetImg().Length - 1 && this.y == sprite.GetY()) { return true; }
 
         return false;
     }

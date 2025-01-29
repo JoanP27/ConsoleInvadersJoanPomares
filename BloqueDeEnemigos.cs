@@ -12,15 +12,15 @@ class BloqueDeEnemigos
     {
         for (int i = 0; i < 10; i++)
         {
-            enemigos[0, i] = new Enemigo((i + 1) * 5, 2, 0);
+            enemigos[0, i] = new Enemigo((i + 1) * 4, 2, 0);
         }
         for (int i = 0; i < 10; i++)
         {
-            enemigos[1, i] = new Enemigo(((i + 1) * 5), 4, 1);
+            enemigos[1, i] = new Enemigo(((i + 1) * 4), 4, 1);
         }
         for (int i = 0; i < 10; i++)
         {
-            enemigos[2, i] = new Enemigo(((i + 1) * 5), 6, 2);
+            enemigos[2, i] = new Enemigo(((i + 1) * 4), 6, 2);
         }
     }
     public void Dibujar()
@@ -31,8 +31,6 @@ class BloqueDeEnemigos
     }
     public void Mover(int direccion)
     {
-        
-
         if (direccion == 1)
         {
             for(int i=0;i<3;i++)
@@ -51,19 +49,15 @@ class BloqueDeEnemigos
             }
         }
     }
-
     public void MoverAbajo()
-    {
-        
-
+    { 
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 10; j++)
             {
                 if (enemigos[i, j].GetActivo() == true) 
                 {
-                    Console.SetCursorPosition(enemigos[i, j].GetX(), enemigos[i, j].GetY());
-                    Console.Write("   ");
+
                     enemigos[i, j].MoverA(enemigos[i, j].GetX(), enemigos[i, j].GetY() + 1); 
                 }
             }
@@ -103,11 +97,17 @@ class BloqueDeEnemigos
         
         for (int i = 0; i < enemigoDisparos.Length; i++)
         {
-            int value = rd.Next(0, 10);
+            int ultimoEnemigoY;
+            int rd_enemigo = rd.Next(0, 10);
             int disparar_probabilidad = rd.Next(0, 2);
-            
-            if (enemigoDisparos[i].GetActivo() == false && disparar_probabilidad == 1 && enemigos[2, value].GetActivo() == true) { 
-                enemigos[2, value].Disparar(enemigoDisparos[i]); 
+
+            if (enemigos[2,rd_enemigo].GetActivo() == true) { ultimoEnemigoY = 2; }
+            else if (enemigos[1,rd_enemigo].GetActivo() == true) { ultimoEnemigoY = 1; }
+            else if (enemigos[0,rd_enemigo].GetActivo() == true) { ultimoEnemigoY = 0; }
+            else { ultimoEnemigoY = -1; }
+        
+            if (enemigoDisparos[i].GetActivo() == false && disparar_probabilidad == 1 && ultimoEnemigoY != -1) { 
+                enemigos[ultimoEnemigoY, rd_enemigo].Disparar(enemigoDisparos[i]); 
             };
         }
     }
