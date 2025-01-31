@@ -3,11 +3,11 @@
 class BloqueDeEnemigos
 {
     Enemigo[,] enemigos = new Enemigo[3, 10];
+
     public BloqueDeEnemigos()
     {
         PopularEnemigos();
     }
-    
     public void PopularEnemigos()
     {
         for (int i = 0; i < 10; i++)
@@ -111,4 +111,21 @@ class BloqueDeEnemigos
             };
         }
     }
+    
+    public void CollisionaCon(Sprite sprite)
+    {
+        
+    }
+    public void CollisionaCon(TorreDefensiva torre)
+    {
+        for (int i=0; i<3; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                torre.CollisionCon(enemigos[i,j]);
+            }
+        }
+    }
+
+
 }

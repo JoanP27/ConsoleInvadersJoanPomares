@@ -2,7 +2,7 @@
 
 class TorreDefensiva : Sprite
 {
-    ParteDeTorre[,] partes_de_torre = new ParteDeTorre[3, 7];
+    ParteDeTorre[,] partesDeTorre = new ParteDeTorre[3, 7];
 
     public TorreDefensiva(int x, int y)
     {
@@ -18,9 +18,9 @@ class TorreDefensiva : Sprite
     {
         for (int i = 0; i < 7; i++)
         {
-            partes_de_torre[0,i] = new ParteDeTorre(x + i, y);
-            partes_de_torre[1,i] = new ParteDeTorre(x + i, y + 1);
-            partes_de_torre[2,i] = new ParteDeTorre(x + i, y + 2);
+            partesDeTorre[0,i] = new ParteDeTorre(x + i, y);
+            partesDeTorre[1,i] = new ParteDeTorre(x + i, y + 1);
+            partesDeTorre[2,i] = new ParteDeTorre(x + i, y + 2);
         }
     }
     public void Dibujar_Partes()
@@ -29,12 +29,36 @@ class TorreDefensiva : Sprite
         {
             for (int j = 0; j < 7; j++)
             {
-                if (partes_de_torre[i, j].GetActivo() == true) { partes_de_torre[i, j].Dibujar(); }
+                if (partesDeTorre[i, j].GetActivo() == true) { partesDeTorre[i, j].Dibujar(); }
             }
         }
     }
     public ParteDeTorre[,] GetPartes()
     {
-        return partes_de_torre;
+        return partesDeTorre;
+    }
+    public bool CollisionCon(Sprite sprite, bool destruirAlTocar = false)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 7; j++)
+            {
+                if (partesDeTorre[i,j].GetX() >= sprite.GetX() &&
+                    partesDeTorre[i, j].GetX() <= sprite.GetX() + sprite.GetImg().Length - 1 &&
+                    partesDeTorre[i, j].GetY() == sprite.GetY() &&
+                    partesDeTorre[i, j].GetActivo() == true) {
+
+                    partesDeTorre[i, j].SetActivo(false);
+                    partesDeTorre[i, j].Desaparecer();
+
+                    if (destruirAlTocar == true)
+                    {
+                        sprite.SetActivo(false);
+                        sprite.Desaparecer();
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

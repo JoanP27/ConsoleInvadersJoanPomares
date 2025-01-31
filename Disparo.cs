@@ -18,7 +18,7 @@ class Disparo : Sprite
         {
             Console.Write(" ");
         }
-        MoverA(10, 10);
+        MoverA(1, 1);
     }
     
     public void Mover()

@@ -56,10 +56,10 @@ class Sprite
     {
         return this.activo;
     }
-    public bool CollisionaCon(Sprite sprite)
+    public virtual bool CollisionaCon(Sprite sprite)
     {
         if (this.x >= sprite.GetX() && this.x <= sprite.GetX() + sprite.GetImg().Length - 1 && this.y == sprite.GetY()) { return true; }
-
         return false;
     }
+   
 }
