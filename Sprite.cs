@@ -39,7 +39,6 @@ class Sprite
     {
         return img;
     }
-
     public void SetImagen(string imagen)
     {
         this.img = imagen;
@@ -61,6 +60,8 @@ class Sprite
     {
         return this.activo;
     }
+
+    // Funcion base de sprite collision con, comprueba el tamaño de la "imagen" para saber donde la bala o otro sprite collisiona con el sprite del parametro
     public virtual bool CollisionaCon(Sprite sprite)
     {
         if (this.x >= sprite.GetX() && this.x <= sprite.GetX() + sprite.GetImg().Length - 1 && this.y == sprite.GetY()) { return true; }

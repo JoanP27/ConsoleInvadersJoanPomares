@@ -111,11 +111,8 @@ class BloqueDeEnemigos
             };
         }
     }
-    
-    public void CollisionaCon(Sprite sprite)
-    {
-        
-    }
+
+    // Funcion especifica de esta clase, primero obtiene cada enemigo de la matriz y llama a collisionar con de torre con cada enemigo
     public void CollisionaCon(TorreDefensiva torre)
     {
         for (int i=0; i<3; i++)
@@ -126,6 +123,7 @@ class BloqueDeEnemigos
             }
         }
     }
+    // Comprueba si todos los enemigos estan inactivos (muertos)
     public bool ComprobarMuertos()
     {
         int contador = 0;

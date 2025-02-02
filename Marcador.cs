@@ -16,7 +16,6 @@ class Marcador
     {
 
     }
-
     public void AddPuntuacion(string nombre, int puntuacion)
     {
         if (listaTamanyo < listaDePuntuaciones.Length) 
@@ -25,10 +24,7 @@ class Marcador
             listaDePuntuaciones[listaTamanyo].puntuacion = puntuacion;
             listaTamanyo++;
         }
-        
-        
     }
-
     public void OrdenarPuntuaciones()
     {
 
@@ -46,7 +42,6 @@ class Marcador
             }
         }
     }
-
     public string[] GetPuntuaciones() 
     {
         int tamanyo = listaTamanyo;

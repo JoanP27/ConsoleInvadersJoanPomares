@@ -13,13 +13,15 @@ class Bienvenida
     {
         Console.ForegroundColor = ConsoleColor.White;
         salir = false;
+        marcador.AddPuntuacion("Joan", 3500);
         string[] puntuaciones = marcador.GetPuntuaciones();
         marcador.OrdenarPuntuaciones();
         bool salirBienvenida = false;
         do
         {
+            
             salir = true;
-            Console.WriteLine("< BIENVENIDO A CONSOLE INVADERS >");
+            Console.WriteLine("< BIENVENIDO A CONSOLE INVADERS > < Lee las intrucciones antes de jugar porfavor >");
             Console.WriteLine();
 
             Console.WriteLine(" - Mejores Puntuaciones - ");

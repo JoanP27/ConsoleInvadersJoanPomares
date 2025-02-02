@@ -34,6 +34,7 @@ class Ovni : Enemigo
         Random rd = new Random();
         if (rd.Next(0, probabilidadAparecer) == 0) { this.SetActivo(true); }
     }
+    // Devuelve true si el numero random da 0, usado en partida para que el ovni dispare la bomba
     public bool ProbabilidadDisparo()
     {
         Random rd = new Random();

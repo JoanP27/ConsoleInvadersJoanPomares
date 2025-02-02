@@ -4,10 +4,9 @@ class Disparo : Sprite
     int direccion = 0;
     bool perfora;
     int contadorVelocidad;
-    int velocidad;
-    bool explota;
-    
-    public Disparo(int x, int y, int direccion, int velocidad, bool explota = false, ConsoleColor color = ConsoleColor.White) {
+    int velocidad;    
+    public Disparo(int x, int y, int direccion, int velocidad, ConsoleColor color = ConsoleColor.White) 
+    {
         this.x = x;
         this.y = y;
         this.direccion = direccion;
@@ -16,7 +15,6 @@ class Disparo : Sprite
         img = "·";
         this.color = color;
         this.perfora = false;
-        this.explota = explota;
     }
     public override void Desaparecer()
     {
@@ -35,13 +33,14 @@ class Disparo : Sprite
         else { contadorVelocidad++; }
     }
 
-    public int GetTiempoDeCarga() { return contadorVelocidad;}
+    public int GetVelocidadDeMovimiento() { return contadorVelocidad;}
 
     public bool GetPerfora() { return this.perfora; }
     public void SetPerfora(bool perfora) { this.perfora = perfora; }
 
     public void SetVelocidad(int velocidad) { this.velocidad = velocidad; }
  
+    // Escribe una linea con fondo rojo en la posicion y del jugador imitando un efecto de explosion
     public void Detonar(int y, int maxX)
     {
         Console.SetCursorPosition(0, y);

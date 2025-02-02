@@ -28,6 +28,7 @@ class Nave : Sprite
     {
         MoverA(x - 1, y);
     }
+    // Comprueba el modo de ataque y configura el disparo antes de activarlo
     public void Disparar(Disparo disparo)
     {
         if (this.modo == 0)
