@@ -5,12 +5,13 @@ class Ovni : Enemigo
     int probabilidadAparecer;
     public Ovni()
     {
-        probabilidadAparecer = 0;
+        probabilidadAparecer = 100;
         activo = false;
         img = "<=o=>";
         this.x = 2;
         this.y = 1;
         color = ConsoleColor.Red;
+        puntuacionMorir = 1000;
     }
 
     public void Mover()

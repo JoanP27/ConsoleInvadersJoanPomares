@@ -2,7 +2,7 @@
 using static System.Runtime.InteropServices.JavaScript.JSType;
 class Enemigo : Sprite
 {
-    
+    protected int puntuacionMorir;
     public Enemigo(int x, int y, int tipo)
     {
         this.activo = true;
@@ -13,15 +13,18 @@ class Enemigo : Sprite
         {
             img = "]|[";
             color = ConsoleColor.Cyan;
+            puntuacionMorir = 200;
         }
         else if (tipo == 1)
         {
             img = "}|{";
             color = ConsoleColor.Red;
+            puntuacionMorir = 100;
         }
         else {
             img = ")|(";
             color = ConsoleColor.Green;
+            puntuacionMorir = 50;
         }
     }
     public Enemigo()
@@ -46,6 +49,10 @@ class Enemigo : Sprite
     {
         base.Desaparecer();
         MoverA(1, 1);
+    }
+    public int GetPuntuacionMorir()
+    {
+        return puntuacionMorir;
     }
 
 
