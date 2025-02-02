@@ -3,9 +3,12 @@ using System;
 class Ovni : Enemigo
 {
     int probabilidadAparecer;
+    int probabilidadDisparo;
+
     public Ovni()
     {
-        probabilidadAparecer = 100;
+        probabilidadAparecer = 200;
+        probabilidadDisparo = 30;
         activo = false;
         img = "<=o=>";
         this.x = 2;
@@ -31,6 +34,10 @@ class Ovni : Enemigo
         Random rd = new Random();
         if (rd.Next(0, probabilidadAparecer) == 0) { this.SetActivo(true); }
     }
-    
-
+    public bool ProbabilidadDisparo()
+    {
+        Random rd = new Random();
+        if (rd.Next(0, probabilidadDisparo) == 0) { return true; }
+        return false;
+    }
 }

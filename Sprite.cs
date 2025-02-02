@@ -39,6 +39,11 @@ class Sprite
     {
         return img;
     }
+
+    public void SetImagen(string imagen)
+    {
+        this.img = imagen;
+    }
     public virtual void Desaparecer()
     {
         Console.SetCursorPosition(this.x, this.y);

@@ -99,7 +99,7 @@ class BloqueDeEnemigos
         {
             int ultimoEnemigoY;
             int rd_enemigo = rd.Next(0, 10);
-            int disparar_probabilidad = rd.Next(0, 2);
+            int disparar_probabilidad = rd.Next(0, 10);
 
             if (enemigos[2,rd_enemigo].GetActivo() == true) { ultimoEnemigoY = 2; }
             else if (enemigos[1,rd_enemigo].GetActivo() == true) { ultimoEnemigoY = 1; }
@@ -125,6 +125,22 @@ class BloqueDeEnemigos
                 torre.CollisionCon(enemigos[i,j]);
             }
         }
+    }
+    public bool ComprobarMuertos()
+    {
+        int contador = 0;
+        for (int i=0; i<3; i++)
+        {
+            for (int j = 0; j< 10; j++)
+            {
+                if (enemigos[i, j].GetActivo() == false) { contador++; }
+            }
+        }
+        if (contador == 30)
+        {
+            return true;
+        }
+        return false;
     }
 
 
